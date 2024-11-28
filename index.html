@@ -37,7 +37,7 @@
 img { 
   width: 100%;
   height: auto;
-}
+} 
 
 .logo-judul-kecil{
   width: 25px;
@@ -409,7 +409,7 @@ a{
 <body>
 <nav class="navbar">
   <ul class="logo">
-    <li><img src="assets/logo meinreise.png" class="logo-judul-kecil"><a href="index.html" class="mein">MeinReise</a></li>
+    <li><img src="assets/logo meinreise.png" class="logo-judul-kecil"><a href="MeinReise.html" class="mein">MeinReise</a></li>
   </ul>
   <ul class="nav-links">
     <li><a class="blog">Blog</a></li>
@@ -424,105 +424,115 @@ a{
   <img src="assets/Fixed image (can be used)/Main Background.jpg" alt="Cinque Terre" width="1000" height="300">
   <div class="center-text">MeinRe<img src="assets/logo meinreise.png" class="logo-judul">se</div>
   <div class="keterangan">Guide your travel</div>
-  <div class="tombol1"> <button type="button" class="tombol1-button">destination</button></div>
-  <div class="tombol2"> <button type="button" class="tombol2-button">booked</button></div>
-  <div class="tombol3"> <button type="button" class="tombol3-button">traveled</button></div>
+  <div class="tombol1"> <button type="button" class="tombol1-button" onclick="scrollToSection('destination')">destination</button></div>
+  <div class="tombol2"> <button type="button" class="tombol2-button" onclick="scrollToSection('booked')">booked</button></div>
+  <div class="tombol3"> <button type="button" class="tombol3-button" onclick="scrollToSection('traveled')">traveled</button></div>
 </div>
 
-
-<div class="card-container">
-  <!-- Card 1 -->
-  <div class="card">
-    <img src="assets/Fixed image (can be used)/bali.jpg" alt="Card Image" class="card-image">
-    <h3 class="card-title">Bali</h3>
-    <p class="card-description">This is a short description about the card content. It adjusts responsively.</p>
-  </div>
-  
-  <!-- Card 2 -->
-  <div class="card">
-    <img src="assets/Fixed image (can be used)/lombok.jpg" alt="Card Image" class="card-image">
-    <h3 class="card-title">Lombok</h3>
-    <p class="card-description">Another description for this card. Resize the screen to see the changes.</p>
-  </div>
-  
-  <!-- Card 3 -->
-  <div class="card">
-    <img src="assets/Fixed image (can be used)/Kalimantan.jpg" alt="Card Image" class="card-image">
-    <h3 class="card-title">Kalimantan</h3>
-    <p class="card-description">Responsive design makes your content look good on any device!</p>
-  </div>
-  
-  <!-- Card 3 -->
-  <div class="card">
-    <img src="assets/Fixed image (can be used)/malang.jpg" alt="Card Image" class="card-image">
-    <h3 class="card-title">Malang</h3>
-    <p class="card-description">Responsive design makes your content look good on any device!</p>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="card">
-    <img src="assets/Fixed image (can be used)/papua.jpg" alt="Card Image" class="card-image">
-    <h3 class="card-title">Papua</h3>
-    <p class="card-description">Responsive design makes your content look good on any device!</p>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="card">
-    <img src="assets/Fixed image (can be used)/labuan bajo.jpg" alt="Card Image" class="card-image">
-    <h3 class="card-title">Labuan Bajo</h3>
-    <p class="card-description">Responsive design makes your content look good on any device!</p>
-  </div>
-</div>
-
-
-
-
-<div class="container">
-  <img src="assets/Fixed image (can be used)/Background booked.jpg" alt="Cinque Terre" width="1000" height="300">
-  <div class="booking_sistem">Easy<br>Booking<br>System</div>
-  <div class="penjelasan_booking">Streamline your appointment scheduling routine by letting<br>your clients book appointments directly on your website.</div>
-  <img class="img_booked" src="assets/calender checked.png">
-  <div class="booked">BOOKED !</div>
-  <div class="tombol_booked"> <button type="button" class="button_booked">View more</button></div>
-  
-  <div class="calendar">
-    <div class="calendar-header">November 2024</div>
-    <div class="calendar-days">
-      <div>Sun</div>
-      <div>Mon</div>
-      <div>Tue</div>
-      <div>Wed</div>
-      <div>Thu</div>
-      <div>Fri</div>
-      <div>Sat</div>
+<section id="destination">
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="assets/Fixed image (can be used)/bali.jpg" alt="Card Image" class="card-image">
+      <h3 class="card-title">Bali</h3>
+      <p class="card-description">This is a short description about the card content. It adjusts responsively.</p>
     </div>
-    <div class="calendar-dates">
-      <div class="empty"></div>
-      <div class="empty"></div>
-      <div class="empty"></div>
-      <div class="empty"></div>
-      <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
-      <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
-      <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
-      <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
-      <div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+    
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="assets/Fixed image (can be used)/lombok.jpg" alt="Card Image" class="card-image">
+      <h3 class="card-title">Lombok</h3>
+      <p class="card-description">Another description for this card. Resize the screen to see the changes.</p>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="assets/Fixed image (can be used)/Kalimantan.jpg" alt="Card Image" class="card-image">
+      <h3 class="card-title">Kalimantan</h3>
+      <p class="card-description">Responsive design makes your content look good on any device!</p>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="assets/Fixed image (can be used)/malang.jpg" alt="Card Image" class="card-image">
+      <h3 class="card-title">Malang</h3>
+      <p class="card-description">Responsive design makes your content look good on any device!</p>
+    </div>
+  
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="assets/Fixed image (can be used)/papua.jpg" alt="Card Image" class="card-image">
+      <h3 class="card-title">Papua</h3>
+      <p class="card-description">Responsive design makes your content look good on any device!</p>
+    </div>
+  
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="assets/Fixed image (can be used)/labuan bajo.jpg" alt="Card Image" class="card-image">
+      <h3 class="card-title">Labuan Bajo</h3>
+      <p class="card-description">Responsive design makes your content look good on any device!</p>
     </div>
   </div>
-</div>
-
-
-<div class="container">
-  <img src="assets/Fixed image (can be used)/background shading.png" alt="Cinque Terre" width="1000" height="300">
-  <div class="history">History</div>
-  <div class="angka_place">20</div><div class="tulisan_place">Places visited</div>
-  <div class="angka_money">IDR 100.000</div><div class="tulisan_money">Money Spent</div>
-  <div class="angka_hours">350</div><div class="tulisan_hours">Hours Spent</div>
-  <div class="angka_etc">90</div><div class="tulisan_etc">etc</div>
-</div>
+</section>
 
 
 
+<section id="booked">
+  <div class="container">
+    <img src="assets/Fixed image (can be used)/Background booked.jpg" alt="Cinque Terre" width="1000" height="300">
+    <div class="booking_sistem">Easy<br>Booking<br>System</div>
+    <div class="penjelasan_booking">Streamline your appointment scheduling routine by letting<br>your clients book appointments directly on your website.</div>
+    <img class="img_booked" src="assets/calender checked.png">
+    <div class="booked">BOOKED !</div>
+    <div class="tombol_booked"> <button type="button" class="button_booked">View more</button></div>
+    
+    <div class="calendar">
+      <div class="calendar-header">November 2024</div>
+      <div class="calendar-days">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <div class="calendar-dates">
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+        <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
+        <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+        <div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section id="traveled">
+  <div class="container">
+    <img src="assets/Fixed image (can be used)/background shading.png" alt="Cinque Terre" width="1000" height="300">
+    <div class="history">History</div>
+    <div class="angka_place">20</div><div class="tulisan_place">Places visited</div>
+    <div class="angka_money">IDR 100.000</div><div class="tulisan_money">Money Spent</div>
+    <div class="angka_hours">350</div><div class="tulisan_hours">Hours Spent</div>
+    <div class="angka_etc">90</div><div class="tulisan_etc">etc</div>
+  </div>
+</section>
+
+
+
+<script>
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
 
 </body>
 </html>
