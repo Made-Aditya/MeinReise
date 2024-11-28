@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,373;1,14..32,373&display=swap" rel="stylesheet">
+
+
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+ }
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.logo-judul{
+  width: 100px
+}
+.center-text {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  font-size: 125px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+img { 
+  width: 100%;
+  height: auto;
+}
+
+.logo-judul-kecil{
+  width: 25px;
+}
+.mein{
+  font-size: 20px;
+}
+.navbar{
+  position: fixed;
+  display: flex;
+  justify-content: space-between; /* Separate elements to left and right */
+  align-items: center; /* Center items vertically */
+  z-index: 99;
+  padding: 1% 2%; /* Add padding around navbar */
+  width: 100%; /* Ensure navbar spans the full width */
+  background-color:rgba(0, 0, 0, 0.178); /* Transparent background */
+}
+.logo {
+  display: flex; /* Use flexbox for logo section */
+  align-items: center; /* Vertically align items */
+  list-style: none;
+  padding: 0;
+}
+.logo li {
+  margin-right: 15px; /* Add space between elements in the logo section */
+}
+.nav-links {
+  display: flex; /* Use flexbox for navigation links */
+  align-items: center; /* Center items vertically */
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+}
+.nav-links li {
+  margin-left: 15px; /* Add space between elements */
+}
+#search {
+  padding-left: 10px;
+  padding-top: 0;
+  width:200px;
+  border-radius: 25px;
+  height: 30px;
+  border: none;
+}
+input::placeholder{
+  font-size: 15px;
+}
+.blog{
+  font-size: 20px;
+  margin-right: 15px;
+}
+.contact{
+  font-size: 20px;
+  margin-right: 15px;
+}
+li{
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.keterangan{
+  position: absolute;
+  top: 48%;
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.tombol1{
+  z-index: 5;
+  position: absolute;
+  top: 58%;
+  left: 30%;
+  width: 100%;
+  display: inline-block;
+  
+}
+.tombol1-button{
+  background-color: rgb(255, 245, 205);
+  border: none;
+  border-radius: 20px;
+  height: 45px;
+  width: 165px;
+  font-size: 20px;
+}
+.tombol2{
+  z-index: 5;
+  position: absolute;
+  top: 58%;
+  left: 44%;
+  width: 100%;
+  display: inline-block;
+}
+.tombol2-button{
+  background-color: rgb(255, 245, 205);
+  border: none;
+  border-radius: 20px;
+  height: 45px;
+  width: 165px;
+  font-size: 20px;
+}
+.tombol3{
+  z-index: 5;
+  position: absolute;
+  top: 58%;
+  left: 58%;
+  width: 100%;
+  display: inline-block;
+}
+.tombol3-button{
+  background-color: rgb(255, 245, 205);
+  border: none;
+  border-radius: 20px;
+  height: 45px;
+  width: 165px;
+  font-size: 20px;
+}
+
+
+
+/* Card Container */
+.card-container {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center; /* Center the cards */
+  gap: 50px; /* Spacing between cards */
+  font-family: 'Inter', serif;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 500px; /* Flexible width */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+/* Card Image */
+.card-image {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.5rem; /* Responsive text size */
+  margin: 15px;
+  color: #333;
+}
+
+/* Card Description */
+.card-description {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 15px 15px;
+  line-height: 1.5;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-5px); /* Lift the card */
+}
+
+
+
+
+.calendar {
+  width: 700px;
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  background: #f8f9fa;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Bulan */
+.calendar-header {
+  background: #E78F81;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  padding: 30px 90px 30px;
+  font-weight: bold;
+}
+
+/* Header Hari */
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 kolom untuk 7 hari */
+  background: #e9ecef;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #495057;
+}
+
+/* Tanggal */
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 kolom */
+  padding: 18px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Tanggal Kosong */
+.calendar-dates .empty {
+  background: transparent;
+}
+
+/* Tanggal Aktif */
+.calendar-dates div {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 0%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.calendar-dates div:hover {
+  background: #98DED9;
+  color: white;
+}
+
+/* Tanggal Spesial (Opsional) */
+.calendar-dates .today {
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+}
+
+
+.booking_sistem{
+  position: absolute;
+  top: 23%;
+  right: 70%;
+  font-size: 80px;
+  color: white;
+  font-family: "Inter", serif;
+}
+.penjelasan_booking{
+  position: absolute;
+  top: 52%;
+  right: 57.8%;
+  font-size: 20px;
+  color: white;
+  font-weight: 200;
+  font-family: "Inter", serif;
+  
+}
+.img_booked{
+  position: absolute;
+  top: 58%;
+  right: 83.4%;
+  width: 60px;
+}
+.booked{
+  position: absolute;
+  font-family: "Inter", serif;
+  font-weight: 400;
+  top: 59%;
+  color: white;
+  right: 74%;
+  font-size: 35px;
+}
+.tombol_booked{
+  position: absolute;
+  top: 64%;
+  left: 12.5%;
+  width: 100%;
+  padding: 20px;
+}
+.button_booked{
+  background-color: #E78F81;
+  border: none;
+  border-radius: 15px;
+  height: 60px;
+  width: 200px;
+  font-size: 1.5rem;
+}
+
+.history{
+  position: absolute;
+  font-family: "Inter", serif;
+  font-size: 100px;
+  top: 38%;
+  left: 10%;
+}
+.angka_place{
+  position: absolute;
+  font-family: "Inter", serif;
+  font-size: 40px;
+  top: 25%;
+  right: 50%;
+}
+.angka_money{
+  position: absolute;
+  font-family: "Inter", serif;
+  font-size: 40px;
+  top: 25%;
+  right: 15%;
+}
+.angka_hours{
+  position: absolute;
+  font-family: "Inter", serif;
+  font-size: 40px;
+  top: 65%;
+  right: 50%;
+}
+.angka_etc{
+  position: absolute;
+  font-family: "Inter", serif;
+  font-size: 40px;
+  top: 65%;
+  right: 20%;
+}
+.tulisan_place{
+  position: absolute;
+  font-family: "inter", serif;
+  font-size: 40px;
+  top: 31%;
+  right: 44%;
+}
+.tulisan_money{
+  position: absolute;
+  font-family: "inter", serif;
+  font-size: 40px;
+  top: 31%;
+  right: 15%;
+}
+.tulisan_hours{
+  position: absolute;
+  font-family: "inter", serif;
+  font-size: 40px;
+  top: 70%;
+  right: 45.5%;
+}
+.tulisan_etc{
+  position: absolute;
+  font-family: "inter", serif;
+  font-size: 40px;
+  top: 70%;
+  right: 19.8%;
+}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+<nav class="navbar">
+  <ul class="logo">
+    <li><img src="assets/logo meinreise.png" class="logo-judul-kecil"><a href="" class="mein">MeinReise</a></li>
+  </ul>
+  <ul class="nav-links">
+    <li><a class="blog">Blog</a></li>
+    <li><a class="contact">Contact</a></li>
+    <li class="search"><input type="search" id="search" placeholder="Search"></li>
+  </ul>
+</nav>
+
+
+
+<div class="container">
+  <img src="assets/Fixed image (can be used)/Main Background.jpg" alt="Cinque Terre" width="1000" height="300">
+  <div class="center-text">MeinRe<img src="assets/logo meinreise.png" class="logo-judul">se</div>
+  <div class="keterangan">Guide your travel</div>
+  <div class="tombol1"> <button type="button" class="tombol1-button">destination</button></div>
+  <div class="tombol2"> <button type="button" class="tombol2-button">booked</button></div>
+  <div class="tombol3"> <button type="button" class="tombol3-button">traveled</button></div>
+</div>
+
+
+<div class="card-container">
+  <!-- Card 1 -->
+  <div class="card">
+    <img src="assets/Fixed image (can be used)/bali.jpg" alt="Card Image" class="card-image">
+    <h3 class="card-title">Bali</h3>
+    <p class="card-description">This is a short description about the card content. It adjusts responsively.</p>
+  </div>
+  
+  <!-- Card 2 -->
+  <div class="card">
+    <img src="assets/Fixed image (can be used)/lombok.jpg" alt="Card Image" class="card-image">
+    <h3 class="card-title">Lombok</h3>
+    <p class="card-description">Another description for this card. Resize the screen to see the changes.</p>
+  </div>
+  
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="assets/Fixed image (can be used)/Kalimantan.jpg" alt="Card Image" class="card-image">
+    <h3 class="card-title">Kalimantan</h3>
+    <p class="card-description">Responsive design makes your content look good on any device!</p>
+  </div>
+  
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="assets/Fixed image (can be used)/malang.jpg" alt="Card Image" class="card-image">
+    <h3 class="card-title">Malang</h3>
+    <p class="card-description">Responsive design makes your content look good on any device!</p>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="assets/Fixed image (can be used)/papua.jpg" alt="Card Image" class="card-image">
+    <h3 class="card-title">Papua</h3>
+    <p class="card-description">Responsive design makes your content look good on any device!</p>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="assets/Fixed image (can be used)/labuan bajo.jpg" alt="Card Image" class="card-image">
+    <h3 class="card-title">Labuan Bajo</h3>
+    <p class="card-description">Responsive design makes your content look good on any device!</p>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <img src="assets/Fixed image (can be used)/Background booked.jpg" alt="Cinque Terre" width="1000" height="300">
+  <div class="booking_sistem">Easy<br>Booking<br>System</div>
+  <div class="penjelasan_booking">Streamline your appointment scheduling routine by letting<br>your clients book appointments directly on your website.</div>
+  <img class="img_booked" src="assets/calender checked.png">
+  <div class="booked">BOOKED !</div>
+  <div class="tombol_booked"> <button type="button" class="button_booked">View more</button></div>
+  
+  <div class="calendar">
+    <div class="calendar-header">November 2024</div>
+    <div class="calendar-days">
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+    <div class="calendar-dates">
+      <div class="empty"></div>
+      <div class="empty"></div>
+      <div class="empty"></div>
+      <div class="empty"></div>
+      <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+      <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+      <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
+      <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+      <div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <img src="assets/Fixed image (can be used)/background shading.png" alt="Cinque Terre" width="1000" height="300">
+  <div class="history">History</div>
+  <div class="angka_place">20</div><div class="tulisan_place">Places visited</div>
+  <div class="angka_money">IDR 100.000</div><div class="tulisan_money">Money Spent</div>
+  <div class="angka_hours">350</div><div class="tulisan_hours">Hours Spent</div>
+  <div class="angka_etc">90</div><div class="tulisan_etc">etc</div>
+</div>
+
+
+
+
+
+</body>
+</html>
+
+

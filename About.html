@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,373;1,14..32,373&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+
+        .logo-judul-kecil{
+            width: 25px;
+        }
+        .mein{
+            font-size: 20px;
+        }
+        .navbar{
+            position: fixed;
+            display: flex;
+            justify-content: space-between; /* Separate elements to left and right */
+            align-items: center; /* Center items vertically */
+            z-index: 99;
+            padding: 1% 2%; /* Add padding around navbar */
+            width: 100%; /* Ensure navbar spans the full width */
+            background-color: rgba(0, 0, 0, 0.178); /* Transparent background */
+        }
+        .logo {
+            display: flex; /* Use flexbox for logo section */
+            align-items: center; /* Vertically align items */
+            list-style: none;
+            padding: 0;
+        }
+        .logo li {
+            margin-right: 15px; /* Add space between elements in the logo section */
+        }
+        .nav-links {
+            display: flex; /* Use flexbox for navigation links */
+            align-items: center; /* Center items vertically */
+            list-style: none; /* Remove bullets */
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            margin-left: 15px; /* Add space between elements */
+        }
+        #search {
+            padding-left: 10px;
+            padding-top: 0;
+            width:200px;
+            border-radius: 25px;
+            height: 30px;
+            border: none;
+        }
+        input::placeholder{
+            font-size: 15px;
+        }
+        .blog{
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .contact{
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        li{
+            text-decoration: none;
+            list-style: none;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .contact_us{
+            position: absolute;
+            font-family: "Inter", serif;
+            font-size: 80px;
+            top: 16%;
+            left: 3%;
+            font-weight: 800;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+        }
+        .div_email{
+            position: absolute;
+            top: 30%;
+            left: 3%;
+        }
+        .email{
+            height: 40px;
+            width: 600px;
+            padding-left: 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.767);
+        }
+        input::placeholder{
+            font-family: "Inter", serif;
+            font-size: 15px;
+        }
+        .div_textarea{
+            position: absolute;
+            top: 35%;
+            left: 3%;
+        }
+        .textarea{
+            height: 500px;
+            width: 1000px;
+            padding-left: 15px;
+            border-radius: 20px;
+            border: none;
+            padding-top: 15px;
+            background-color: rgba(255, 255, 255, 0.767);
+        }
+        textarea::placeholder{
+            font-family: "Inter", serif;
+            font-size: 15px;
+        }
+        .div_submit{
+            position: absolute;
+            top: 83.8%;
+            left: 48.8%;
+        }
+        .submit{
+            font-family: "Inter", serif;
+            font-weight: 500;
+            font-size: 15px;
+            border-radius: 20px;
+            border: none;
+            height: 40px;
+            width: 130px;
+            background-color: #FFF5CD;
+        }
+        .meet_us{
+            position: absolute;
+            font-family: "Inter", serif;
+            font-size: 80px;
+            top: 10%;
+            font-weight: 800;
+            color: #98DED9;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+        }
+        .google_map{
+            border: none;
+            position: absolute;
+            top: 30%;
+            border-radius: 5%;
+        }
+
+        .img_sosmed{
+            position: absolute;
+            width: 600px;
+            height: 400px;
+            top: 25%;
+            right: 50%;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .logo_sosmed{
+            position: absolute;
+            top: 30%;
+            right: 25%;
+        }
+        .judul_sosmed{
+            position: absolute;
+            font-family: "Inter", serif;
+            font-size: 50px;
+            font-weight: 600;
+            color: white;
+            top: 45%;
+            right: 18%;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+            height: 200px;
+        }
+        .div_button_sosmed{
+            position: absolute;
+            top: 58%;
+            right: 25%;
+        }
+        .button_sosmed{
+            border-radius: 20px;
+            height: 40px;
+            width: 100px;
+            padding: 5px;
+            font-family: "Inter", serif;
+            font-size: 15px;
+            border: hidden;
+        }
+
+        
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="logo">
+          <li><img src="assets/logo meinreise.png" class="logo-judul-kecil"><a href="" class="mein">MeinReise</a></li>
+        </ul>
+        <ul class="nav-links">
+          <li><a class="blog">Blog</a></li>
+          <li><a class="contact">Contact</a></li>
+          <li class="search"><input type="search" id="search" placeholder="Search"></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Us -->
+    <div class="container">
+        <img src="assets/Fixed image (can be used)/Main Background.jpg" alt="Cinque Terre" width="1000" height="300">
+        <div class="contact_us">Contact Us</div>
+        <div>
+            <form>
+                <div class="div_email"><input type="email" placeholder="email" class="email"></div>
+                <div class="div_textarea"><textarea class="textarea" placeholder="your message..."></textarea></div>
+                <div class="div_submit"><button type="submit" class="submit">Submit</button></div>
+            </form>
+        </div>
+    </div>
+    <!-- Meet Us -->
+     <div class="container">
+        <img src="assets/Fixed image (can be used)/background putih shading kebalik.png">
+        <div class="meet_us">Meet Us</div>
+        <div class="google_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.691977091904!2d112.79118077592892!3d-7.275847092731281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa10ea2ae883%3A0xbe22c55d60ef09c7!2sPoliteknik%20Elektronika%20Negeri%20Surabaya!5e0!3m2!1sen!2sid!4v1732727084991!5m2!1sen!2sid" width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+     </div>
+
+
+     <!-- Card Instagram -->
+     <div class="container" style="background-color: #ebeaea; width: 80%; height: 800px; margin: auto; margin-top: 30px; margin-bottom: 30px; border-radius: 20px;">
+        <div class="img_sosmed">
+            <img src="assets/Fixed image (can be used)/Instagram.jpg">
+        </div>
+        <div class="logo_sosmed"><img src="assets/Fixed image (can be used)/icon instagram.png" alt="Instagram" style="width: 100px;"></div>
+        <div class="judul_sosmed">Our Instagram</div>
+        <div class="penjelasan_instagram"></div>
+        <div class="div_button_sosmed"><button type="button" class="button_sosmed" style="background-color: #F34E55; color: white;">Visit Us!</button></div>
+     </div>
+
+
+     <!-- Card Whatsapp -->
+     <div class="container" style="background-color: #ebeaea; width: 80%; height: 800px; margin: auto; margin-top: 30px; margin-bottom: 30px; border-radius: 20px;">
+        <div class="img_sosmed">
+            <img src="assets/Fixed image (can be used)/Whatsapp.jpg">
+        </div>
+        <div class="logo_sosmed"><img src="assets/Fixed image (can be used)/icon whatsapp.png" alt="Whatsapp" style="width: 100px;"></div>
+        <div class="judul_sosmed">Our Whatsapp</div>
+        <div class="penjelasan_instagram"></div>
+        <div class="div_button_sosmed"><button type="button" class="button_sosmed" style="background-color:#60D669; color: white;">Visit Us!</button></div>
+     </div>
+
+     <!-- Card Facebook -->
+     <div class="container" style="background-color: #ebeaea; width: 80%; height: 800px; margin: auto; margin-top: 30px; margin-bottom: 30px; border-radius: 20px;">
+        <div class="img_sosmed">
+            <img src="assets/Fixed image (can be used)/Facebook.jpg">
+        </div>
+        <div class="logo_sosmed"><img src="assets/Fixed image (can be used)/icon facebook.png" alt="Instagram" style="width: 100px;"></div>
+        <div class="judul_sosmed">Our Facebook</div>
+        <div class="penjelasan_instagram"></div>
+        <div class="div_button_sosmed"><button type="button" class="button_sosmed" style="background-color:#1877F2; color: white;">Visit Us!</button></div>
+     </div>
+
+     <!-- Card X -->
+     <div class="container" style="background-color: #ebeaea; width: 80%; height: 800px; margin: auto; margin-top: 30px; margin-bottom: 30px; border-radius: 20px;">
+        <div class="img_sosmed">
+            <img src="assets/Fixed image (can be used)/X.jpg">
+        </div>
+        <div class="logo_sosmed"><img src="assets/Fixed image (can be used)/icon X.png" alt="Instagram" style="width: 100px;"></div>
+        <div class="judul_sosmed" style="right: 23%; width: 150px;">Our X</div>
+        <div class="penjelasan_instagram"></div>
+        <div class="div_button_sosmed"><button type="button" class="button_sosmed" style="background-color:#000000; color: white;">Visit Us!</button></div>
+     </div>
+  </body>
